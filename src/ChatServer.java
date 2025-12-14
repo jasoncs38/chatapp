@@ -6,20 +6,21 @@ public class ChatServer {
     private static List<Socket> clients = new ArrayList<>();
 
     public static void main(String[] args) throws Exception {
-        ServerSocket serverSocket = new ServerSocket(5000);
+        ServerSocket ss = new ServerSocket(5000);
         System.out.println("Server started on port 5000...");
 
         while (true) {
-            Socket socket = serverSocket.accept();
+            Socket socket = ss.accept();
             clients.add(socket);
-            System.out.println("New client connected!");
+            System.out.println("New user connected!");
 
-            // Create a thread for each client
+
+            //creating thread
             new ClientHandler(socket).start();
         }
     }
 
-    // Thread to handle each client
+    // Thread to handle each user
     static class ClientHandler extends Thread {
         private Socket socket;
 
