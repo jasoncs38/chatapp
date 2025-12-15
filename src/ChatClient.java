@@ -5,7 +5,7 @@ public class ChatClient {
     public static void main(String[] args) throws Exception {
 
 
-            Socket socket = new Socket("localhost", 5000);
+            Socket socket = new Socket("localhost", 1235);
             System.out.println("Connected to chat server...");
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));

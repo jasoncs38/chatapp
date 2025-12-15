@@ -6,7 +6,7 @@ public class ChatServer {
     private static List<Socket> clients = new ArrayList<>();
 
     public static void main(String[] args) throws Exception {
-        ServerSocket ss = new ServerSocket(5000);
+        ServerSocket ss = new ServerSocket(1235);
         System.out.println("Server started on port 5000...");
 
         while (true) {
