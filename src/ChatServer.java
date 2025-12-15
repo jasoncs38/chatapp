@@ -7,7 +7,7 @@ public class ChatServer {
 
     public static void main(String[] args) throws Exception {
         ServerSocket ss = new ServerSocket(1235);
-        System.out.println("Server started on port 5000...");
+        System.out.println("Server started on port 1235...");
 
         while (true) {
             Socket socket = ss.accept();
@@ -20,7 +20,7 @@ public class ChatServer {
         }
     }
 
-    // Thread to handle each user
+
     static class ClientHandler extends Thread {
         private Socket socket;
 

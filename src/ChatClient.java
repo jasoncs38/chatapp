@@ -6,7 +6,7 @@ public class ChatClient {
 
 
             Socket socket = new Socket("localhost", 1235);
-            System.out.println("Connected to chat server...");
+            System.out.println("Connected to server...");
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
